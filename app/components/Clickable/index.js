@@ -24,7 +24,7 @@ function Clickable({ onClick, textId }) {
 }
 
 Clickable.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.any,
   textId: PropTypes.string.isRequired
 };
 
