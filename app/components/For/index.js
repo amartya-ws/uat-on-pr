@@ -10,8 +10,8 @@ import styled from 'styled-components';
 
 const FlexContainer = styled.div`
   display: flex;
-  flex-direction: ${props => (props.isRow ? `row;` : `column;`)};
 `;
+//flex-direction: ${(props) => (props.isrow ? `row;` : `column;`)};
 
 export function For({ of, ParentComponent = props => <FlexContainer {...props} />, renderItem, noParent, ...props }) {
   const list = () => of.map((item, index) => ({ ...renderItem(item, index), key: index }));
@@ -34,7 +34,7 @@ For.propTypes = {
   renderItem: Proptypes.func.isRequired,
   noParent: Proptypes.bool
 };
-For.defaultProps = {
-  isRow: true
-};
+// For.defaultProps = {
+//   isrow: Proptypes.any
+// };
 export default For;

@@ -24,8 +24,8 @@ function Clickable({ onClick, textId }) {
 }
 
 Clickable.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  textId: PropTypes.string.isRequired
+  onClick: PropTypes.any,
+  textId: PropTypes.any
 };
 
 export default Clickable;
