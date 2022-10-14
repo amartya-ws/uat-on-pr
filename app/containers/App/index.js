@@ -26,7 +26,7 @@ const theme = {
   bg: colors.secondary
 };
 
-export function App({ history, location }) {
+export function App({ history }) {
   return (
     <ThemeProvider theme={theme}>
       <Header />
@@ -39,7 +39,7 @@ export function App({ history, location }) {
         >
           Go to the new route
         </button>
-        <button style={{ margin: '20px', color: 'red' }}>testing the uat setup</button>
+        {/* <button style={{ margin: '20px', color: 'red' }}>testing the uat setup</button> */}
         <For
           ParentComponent={props => <Switch {...props} />}
           of={map(Object.keys(routeConfig))}
@@ -67,7 +67,7 @@ export function App({ history, location }) {
   );
 }
 App.propTypes = {
-  location: PropTypes.object,
+  //location: PropTypes.object,
   history: PropTypes.object
 };
 export default compose(withRouter)(App);
